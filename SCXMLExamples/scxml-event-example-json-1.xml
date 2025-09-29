@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+SESSION1 : SEND USAGE
+Pattern: "event" attribute with an optional "namelist"
+
+<datamodel>
+  <data id="email" expr="'mailto:recipient@example.com'"/>
+  <data id="content" expr="'http://www.example.com/mycontent.txt'"/>
+  <data id="jsoncontent" src="http://www.example.com/headers.json"/>
+</datamodel>
+
+  ...
+
+<send id="send-123"
+      target="'http://scxml-processors.example.com/session2'"
+      type="'scxml'" event="'email.send'"
+      namelist="email content jsoncontent"
+      hints="'' '' 'Email headers'"/>
+
+-->
+<!-- MESSAGE -->
+<scxml:message xmlns:scxml="http://www.w3.org/2005/07/scxml" version="1.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.w3.org/2005/07/scxml scxml-message.xsd"
+       source="http://scxml-processors.example.com/session1"
+       target="http://scxml-processors.example.com/session2"
+       sendid="send-123" name="email.send" language="json">
+  <scxml:payload>
+    <scxml:property name="email">mailto:recipient@example.com</scxml:property>
+    <scxml:property name="content">http://www.example.com/mycontent.txt</scxml:property>
+    <scxml:property name="jsoncontent">
+      <scxml:hint>Email headers</scxml:hint>
+      <![CDATA[
+        headers : {
+          cc  : "audit@example.com" ,
+          subject : "Example email"
+        }
+      ]]>
+    </scxml:property>
+  </scxml:payload>
+</scxml:message>
+<!--
+
+SESSION2 : SEND PROCESSING
+Pattern: "event" attribute with an optional "namelist"
+
+<scxml:transition event="email.send">
+  <my:email to="_event.email"
+            cc="_event.jsoncontent.headers.cc"
+            subject="_event.jsoncontent.headers.subject"
+            content="_event.content"/>
+</scxml:transition>
+
+-->

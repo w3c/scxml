@@ -1,0 +1,34 @@
+<elements>
+<!-- state -->
+	<element>
+		<name>state</name>
+		<attributes>
+			<attribute>
+				<name>id</name>
+				<type>ID</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A valid id as defined in <bibref ref="Schema"/></validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>
+             The identifier for this state.  See <specref ref="IDs"/> for details.
+				</description>
+			</attribute>
+
+
+				<attribute>
+				<name>initial</name>
+				<type>IDREFS</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A legal state specification.  See <specref ref="LegalStateConfigurations"/>
+					for details.</validValues>
+				<attributeConstraints><rfc2119>MUST NOT</rfc2119>  be specified in conjunction with the
+					&lt;initial&gt; element.  <rfc2119>MUST NOT</rfc2119> occur in atomic states.</attributeConstraints>
+				<description>
+        The id of the default initial state (or states) for this state.   
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

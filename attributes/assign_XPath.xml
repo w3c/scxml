@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- assign -->
+	<element>
+		<name>assign</name>
+		<attributes>			
+			<attribute>
+				<name>type</name>
+				<type>enum</type>
+				<required> false </required>
+				<defaultValue>replacechildren</defaultValue>
+				<validValues> replacechildren, firstchild, lastchild, previoussibling, nextsibling,
+					replace, delete, addattribute </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+ Defines the nature of the insertion to be performed. See below for details.
+				</description>
+			</attribute>
+			<attribute>
+				<name>attr</name>
+				<type>NMTOKEN</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> </validValues>
+				<attributeConstraints>This attribute <rfc2119>must</rfc2119> be present if and only if
+				'type' is 'addattribute'.  </attributeConstraints>
+				<description>
+The attribute name to add at the specified location.
+				</description>
+			</attribute>			
+			
+
+		</attributes>
+	</element>
+</elements>

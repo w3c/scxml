@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+
+	<element>
+		<name>In</name>
+		<attributes>
+			<attribute>
+				<name>state</name>
+				<type>IDREF</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					The ID of a state in the current document.  The predicate evalutes to 'true' if 
+					that state is currently active.
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

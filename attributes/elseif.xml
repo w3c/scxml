@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 6.2.5.2 Elseif -->
+	<element>
+		<name>elseif</name>
+		<attributes>
+			<attribute>
+				<name>cond</name>
+				<type> Conditional expression</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues>A valid conditional expression</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					An boolean expression.  See <specref ref="ConditionalExpressions"/> for details.
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

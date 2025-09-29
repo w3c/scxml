@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+
+	<element>
+		<name>foreach</name>
+		<attributes>
+			<attribute>
+				<name>array</name>
+				<type> Value expression</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues>A value expression that evaluates to an iterable collection.  </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					The &lt;foreach&gt; element will iterate over a shallow copy of this collection.
+				</description>
+			</attribute>
+			<attribute>
+				<name>item</name>
+				<type> xsd:string</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any variable name that is valid in the specified data model. </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					A variable that stores a different item of the collection 
+					in each iteration of the loop. 
+					
+				</description>
+			</attribute>
+			<attribute>
+				<name>index</name>
+				<type> xsd:string</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any variable name that is valid in the specified data model.  </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					A variable that stores the current iteration index upon each iteration of the foreach loop.  		
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

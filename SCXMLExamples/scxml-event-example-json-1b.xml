@@ -1,0 +1,20 @@
+<scxml:message xmlns:scxml="http://www.w3.org/2005/07/scxml" version="1.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.w3.org/2005/07/scxml scxml-message.xsd"
+       source="http://scxml-processors.example.com/session1"
+       target="http://scxml-processors.example.com/session2"
+       sendid="send-123" name="email.send" language="json">
+  <scxml:payload>
+    <scxml:property name="email">mailto:recipient@example.com</scxml:property>
+    <scxml:property name="content">http://www.example.com/mycontent.txt</scxml:property>
+    <scxml:property name="jsoncontent">
+      <![CDATA[
+        headers : {
+          cc  : "audit@example.com" ,
+          subject : "Example email"
+        }
+      ]]>
+    </scxml:property>
+    <scxml:hint>Email headers</scxml:hint>
+  </scxml:payload>
+</scxml:message>

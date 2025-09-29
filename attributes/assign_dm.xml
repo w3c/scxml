@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- assign -->
+	<element>
+		<name>assign</name>
+		<attributes>
+			<attribute>
+				<name>location</name>
+				<type>path expression</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any valid location expression. </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+        The location in the data model into which to insert the new value. See <specref ref="LocationExpressions"/>
+        for details.  
+        
+				</description>
+			</attribute>
+			
+	  <attribute>
+				<name>expr</name>
+				<type>value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any valid value expression</validValues>
+				<attributeConstraints>This attribute
+					<rfc2119>must not</rfc2119> occur in an &lt;assign&gt; element that has children.</attributeConstraints>
+				<description>
+           An expression returning the value to be assigned.  See <specref ref="ValueExpressions"/>
+           for details.   
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

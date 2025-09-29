@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 6.2.6.2 Else -->
+	<element>
+		<name>else</name>
+		<attributes>
+			<attribute>
+				<name>none</name>
+				<type></type>
+				<required></required>
+				<defaultValue>none</defaultValue>
+				<validValues></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					else is a synonym for elseif cond="true".
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

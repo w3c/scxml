@@ -1,0 +1,9 @@
+SESSION2 : RECEIVING SESSION
+Pattern: "event" attribute with an optional "namelist"
+
+<scxml:transition event="email.send">
+  <my:email to="_event.email"
+            cc="_event.jsoncontent.headers.cc"
+            subject="_event.jsoncontent.headers.subject"
+            content="_event.content"/>
+</scxml:transition>

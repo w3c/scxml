@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- anchor -->
+	<element>
+		<name>anchor</name>
+		<attributes>
+			<attribute>
+				<name>type</name>
+				<type>xsd:NMTOKEN</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          Defines the type of this anchor instance.  
+				</description>
+			</attribute>
+
+
+
+			
+		<attribute>
+				<name>snapshot</name>
+				<type>path expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any expression denoting a node in the data model.</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         A location in the datamodel to snapshot.   If no snapshot 
+         value is provided, the entire data model is copied.  If the special value '_none' is specified,
+         no snapshot is made.  
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

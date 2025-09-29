@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!--  Log -->
+	<element>
+		<name>log</name>
+		<attributes>
+			<attribute>
+				<name>label</name>
+				<type> string</type>
+				<required>false</required>
+				<defaultValue>empty string</defaultValue>
+				<validValues></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					A character string  with an implementation-dependent interpretation. 
+					It is intended to provide meta-data about the log string specified by
+					'expr'.  
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>expr</name>
+				<type> Value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					An expression returning the value to be logged. See <specref ref="ValueExpressions"/> for details.
+					The nature of the logging mechanism is implementation-dependent.  For example, the SCXML processor
+					 may convert this value to a convenient format before logging it.  
+				</description>
+			</attribute>
+			
+		</attributes>
+	</element>
+</elements>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- data -->
+	<element>
+		<name>data</name>
+		<attributes>
+			<attribute>
+				<name>id</name>
+				<type>ID</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          The name of the data item.  See <specref ref="IDs"/> for details.
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>src</name>
+				<type>URI</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         Gives the location from which the data object should be fetched.  See <specref ref="ValueExpressions"/> for details.
+				</description>
+			</attribute>
+			
+		<attribute>
+				<name>expr</name>
+				<type>Expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any valid value expression </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         Evaluates to provide the value of the data item.  See <specref ref="ValueExpressions"/> for details.
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

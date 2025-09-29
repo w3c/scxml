@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>event</td><td> false</td><td> </td><td>EventsTypes.datatype.  </td><td>none</td><td> A space-separated list of event descriptors.  See
+				<specref ref="EventDescriptors"/> for details.</td><td>
+         A list of designators of events that trigger this transition. See 
+          <specref ref="SelectingTransitions"/> for
+         details on how transitions are selected and executed.  See <specref ref="schemas"/> for the definition of the datatype.
+				</td></tr><tr><td>cond</td><td>false</td><td/><td>Boolean expression</td><td>'true'</td><td>Any boolean expression. See <specref ref="ConditionalExpressions"/> for details.</td><td>
+         The guard condition for this transition. See 
+           <specref ref="SelectingTransitions"/> for details.
+				</td></tr><tr><td>target</td><td>false</td><td>.</td><td>IDREFS</td><td>none</td><td>A legal state specification.  See <specref ref="LegalStateConfigurations"/>
+					for details.</td><td>The identifier(s) of the state or parallel 
+						region to transition to. 
+						See <specref ref="SelectingTransitions"/> for details.
+						</td></tr><tr><td>type</td><td>false</td><td/><td>enum</td><td>"external"</td><td>"internal" "external"</td><td>Determines whether the source state is exited in transitions whose
+						target state is a descendant of the source state. 
+						See <specref ref="SelectingTransitions"/> for details.
+						</td></tr></tbody></table>

@@ -1,0 +1,6 @@
+
+<state id=s">
+   <transition event="e" cond="x==1" target="s1"/>
+   <transition event="e" target="s2"/>
+   <transition event="*" target="s3"/>
+</state>

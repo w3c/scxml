@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>sendid</td><td>false</td><td>Must not occur with sendidexpr. 
+					</td><td> IDREF</td><td>none</td><td>The sendid of a delayed event</td><td>The ID of the event(s) to be cancelled.  If
+						multiple delayed events have this sendid, the Processor
+						will cancel them all. </td></tr><tr><td>sendidexpr</td><td>false</td><td>Must not occur with sendid.</td><td> Value Expression</td><td>none</td><td>Any expression that evaluates to the ID of a delayed event</td><td>
+	A dynamic alternative to 'sendid'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119>
+	 evaluate it when the parent &lt;cancel&gt; 
+		element is evaluated and treat the result as if it had been entered as the value of 'sendid'. 
+				</td></tr></tbody></table>

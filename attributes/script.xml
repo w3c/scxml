@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section script -->
+	<element>
+		<name>script</name>
+		<attributes>
+			<attribute>
+				<name>src</name>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A valid URI</validValues>
+				<attributeConstraints>May not occur if the element has children.</attributeConstraints>
+				<description>
+					Gives the location from which the script should be downloaded.
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!--  If -->
+	<element>
+		<name>content</name>
+		<attributes>
+			<attribute>
+				<name>expr</name>
+				<type>Value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any valid value expression</validValues>
+				<attributeConstraints>must not occur with child content</attributeConstraints>
+				<description>
+					A value expression.  See <specref ref="ValueExpressions"/> for details.
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

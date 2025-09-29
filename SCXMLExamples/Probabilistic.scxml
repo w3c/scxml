@@ -1,0 +1,17 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initial="S1">
+  
+  <state id="S1">
+    <datamodel>
+      <data name="rand">
+    </datamodel>
+    <onentry>
+      <assign name="rand" expr="Math.random()"/>
+    </onentry>
+    <transition event="E1" cond="rand <= 0.3" target="S2"/>
+    <transition event="E1" cond="rand > 0.3" target="S3">
+  </state>
+  
+  <state id="S2"/>
+  <state id="S3"/>
+  
+</scxml>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2005/SCXML" xmlns:scxml="http://www.w3.org/2005/SCXML">
+  <!-- Here is our top level rule -->
+  <xs:element name="scxml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:state"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="1.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="initialstate" type="xs:IDREF"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="state">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="scxml:initial"/>
+        <xs:element ref="scxml:onentry"/>
+        <xs:element ref="scxml:onexit"/>
+        <xs:element ref="scxml:transition"/>
+        <xs:element ref="scxml:state"/>
+        <xs:element ref="scxml:parallel"/>
+        <xs:element ref="scxml:history"/>
+        <xs:element ref="scxml:sync"/>
+        <xs:element ref="scxml:join"/>
+      </xs:choice>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="final" default="false" type="xs:boolean"/>
+      <xs:attribute name="src" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parallel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="scxml:onentry"/>
+        <xs:element ref="scxml:onexit"/>
+        <xs:element ref="scxml:state"/>
+        <xs:element ref="scxml:sync"/>
+        <xs:element ref="scxml:join"/>
+      </xs:choice>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="initial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:transition"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="src" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="history">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:transition"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="type" default="shallow">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="shallow"/>
+            <xs:enumeration value="deep"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="src" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="join">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:transition"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sync">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:transition"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="bound" default="0" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="transition">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:choice>
+          <xs:element ref="scxml:target"/>
+          <xs:element ref="scxml:exit"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:element ref="scxml:assign"/>
+          <xs:element ref="scxml:var"/>
+          <xs:element ref="scxml:log"/>
+          <xs:element ref="scxml:send"/>
+          <xs:element ref="scxml:if"/>
+          <xs:group ref="scxml:anyOtherNSElement"/>
+        </xs:choice>
+      </xs:choice>
+      <xs:attribute name="event"/>
+      <xs:attribute name="cond"/>
+      <xs:attribute name="name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="target">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="scxml:state"/>
+      </xs:sequence>
+      <xs:attribute name="next" type="xs:IDREF"/>
+      <xs:attribute name="cond"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="onentry">
+    <xs:complexType>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="scxml:ExecutableContent"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="onexit">
+    <xs:complexType>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="scxml:ExecutableContent"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="log">
+    <xs:complexType>
+      <xs:attribute name="expr"/>
+      <xs:attribute name="label"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="if">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:elseif"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:else"/>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="scxml:ExecutableContent"/>
+      </xs:sequence>
+      <xs:attribute name="cond"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="elseif">
+    <xs:complexType>
+      <xs:attribute name="cond"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="else">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="assign">
+    <xs:complexType>
+      <xs:attribute name="expr" use="required"/>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="var">
+    <xs:complexType>
+      <xs:attribute name="expr"/>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exit">
+    <xs:complexType>
+      <xs:attribute name="expr"/>
+      <xs:attribute name="namelist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="send">
+    <xs:complexType>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="scxml:anyOtherNSElement"/>
+      <xs:attribute name="target"/>
+      <xs:attribute name="targettype" default="scxml"/>
+      <xs:attribute name="sendid"/>
+      <xs:attribute name="delay" default="'0s'"/>
+      <xs:attribute name="event"/>
+      <xs:attribute name="hints"/>
+      <xs:attribute name="namelist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="anyOtherNSElement">
+    <xs:choice>
+      <xs:any namespace="##other" processContents="skip"/>
+      <xs:any namespace="##local" processContents="skip"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="ExecutableContent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:assign"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:var"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:log"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:send"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="scxml:if"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="scxml:anyOtherNSElement"/>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- event -->
+	<element>
+		<name>raise</name>
+		<attributes>
+			<attribute>
+				<name>event</name>
+				<type>NMTOKEN</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          Specifies the name of the event.  This will be matched against the 'event' attribute
+          of transitions.  
+				</description>
+			</attribute>
+
+
+
+		</attributes>
+	</element>
+</elements>

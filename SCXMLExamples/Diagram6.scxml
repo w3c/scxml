@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<scxml version="1.0" xmlns="http://www.w3.org/2005/SCXML"> 
+
+  <state>
+    <parallel>
+      
+      <state id="S1">
+        <state id="S11">
+          <transition target="S12 j1"/>
+        </state>
+        <state id="S12">
+          <transition target="S13"/>
+        </state>
+        <state id="S13"/>
+        </state>
+      
+      <state id="S2">
+        <state id="S21">
+          <transition target="S12"/>
+        </state>
+        <state id="S22>
+          <transition target="j1"/>
+         </state>
+        <state id="S23"/>
+        <join id="j1">
+        <transition target="S23"/>
+        </join>
+      </state>
+    
+    </parallel>
+  </state>
+</scxml>

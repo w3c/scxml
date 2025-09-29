@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>label</td><td>false</td><td/><td> string</td><td>empty string</td><td/><td>
+					A character string  with an implementation-dependent interpretation. 
+					It is intended to provide meta-data about the log string specified by
+					'expr'.  
+				</td></tr><tr><td>expr</td><td>false</td><td/><td> Value expression</td><td>none</td><td/><td>
+					An expression returning the value to be logged. See <specref ref="ValueExpressions"/> for details.
+					The nature of the logging mechanism is implementation-dependent.  For example, the SCXML processor
+					 may convert this value to a convenient format before logging it.  
+				</td></tr></tbody></table>

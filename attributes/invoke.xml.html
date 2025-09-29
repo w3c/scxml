@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>type</td><td>false</td><td>Must not occur with the 'typeexpr' attribute.</td><td>URI</td><td>none</td><td> http://www.w3.org/TR/scxml/, http://www.w3.org/TR/ccxml/, 
+http://www.w3.org/TR/voicexml30/, http://www.w3.org/TR/voicexml21/
+ plus other platform-specific values. </td><td>
+            A URI specifying the type of the external service.  See below for details. 
+
+				</td></tr><tr><td>typeexpr</td><td>false</td><td>Must not occur with the 'type' attribute.</td><td>value expression</td><td>none</td><td> Any value expression that evaluates to a URI that
+					would be a valid value for 'type'. </td><td>
+A dynamic alternative to 'type'.  If this attribute is present, the SCXML Processor 
+<rfc2119>must</rfc2119> evaluate
+it when the parent &lt;invoke&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'type'. 
+				</td></tr><tr><td>src</td><td> false</td><td>Must not occur with the 'srcexpr' attribute or the
+					&lt;content&gt; element. </td><td>URI</td><td>None</td><td> Any URI. </td><td>
+          A URI to be passed to the external service.  See below
+          for details.          
+				</td></tr><tr><td>srcexpr</td><td> false</td><td>Must not occur with the 'src' attribute or the &lt;content&gt;
+					element. </td><td>Value expression</td><td>None</td><td> Any expression evaluating to a valid URI. </td><td>A dynamic alternative to 'src'. If this attribute is present, the SCXML Processor 
+<rfc2119>must</rfc2119> evaluate
+it when the parent &lt;invoke&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'src'.   
+				</td></tr><tr><td>id</td><td>false</td><td>Must not occur with the 'idlocation' attribute.</td><td> ID</td><td>none</td><td> Any valid token</td><td>
+					A string literal to be used as the identifier for this instance of &lt;invoke&gt;. See
+					<specref ref="IDs"/> for details.  
+				</td></tr><tr><td>idlocation</td><td>false</td><td>Must not occur with the 'id' attribute.</td><td> Location expression</td><td>none</td><td> Any valid location expression</td><td>
+					Any data model expression evaluating to a data model location.  See <specref ref="LocationExpressions"/> for details.
+
+				</td></tr><tr><td>namelist</td><td>false</td><td>				
+					Must not occur with the &lt;param&gt; element. 
+				</td><td>List of location expressions</td><td>none</td><td> List of valid location expressions</td><td>
+					A space-separated list of one or more data model locations to be passed 
+					 as attribute/value pairs
+					to the invoked service.  (The name  of the location is the attribute and the value stored at the location
+					is the value.)  See <specref ref="DataSharing"/> and 
+					<specref ref="LocationExpressions"/> for details. 
+				</td></tr><tr><td>autoforward</td><td> false</td><td/><td>boolean</td><td>false</td><td> true or false </td><td>
+          A flag indicating whether to forward events to the invoked process.  See below for details.            
+				</td></tr></tbody></table>

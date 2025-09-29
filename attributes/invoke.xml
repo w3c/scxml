@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- invoke -->
+	<element>
+		<name>invoke</name>
+		<attributes>
+			<attribute>
+				<name>type</name>
+				<type>URI</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> http://www.w3.org/TR/scxml/, http://www.w3.org/TR/ccxml/, 
+http://www.w3.org/TR/voicexml30/, http://www.w3.org/TR/voicexml21/
+ plus other platform-specific values. </validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'typeexpr' attribute.</attributeConstraints>
+				<description>
+            A URI specifying the type of the external service.  See below for details. 
+
+				</description>
+				</attribute>
+			<attribute>
+				<name>typeexpr</name>
+				<type>value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any value expression that evaluates to a URI that
+					would be a valid value for 'type'. </validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'type' attribute.</attributeConstraints>
+				<description>
+A dynamic alternative to 'type'.  If this attribute is present, the SCXML Processor 
+<rfc2119>must</rfc2119> evaluate
+it when the parent &lt;invoke&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'type'. 
+				</description>
+				</attribute>
+
+
+		<attribute>
+				<name>src</name>
+				<type>URI</type>
+				<required> false</required>
+				<defaultValue>None</defaultValue>
+				<validValues> Any URI. </validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'srcexpr' attribute or the
+					&lt;content&gt; element. </attributeConstraints>
+				<description>
+          A URI to be passed to the external service.  See below
+          for details.          
+				</description>
+			</attribute> 			
+		<attribute>
+				<name>srcexpr</name>
+				<type>Value expression</type>
+				<required> false</required>
+				<defaultValue>None</defaultValue>
+				<validValues> Any expression evaluating to a valid URI. </validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'src' attribute or the &lt;content&gt;
+					element. </attributeConstraints>
+				<description>A dynamic alternative to 'src'. If this attribute is present, the SCXML Processor 
+<rfc2119>must</rfc2119> evaluate
+it when the parent &lt;invoke&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'src'.   
+				</description>
+			</attribute>
+
+			<attribute>
+				<name>id</name>
+				<type> ID</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any valid token</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'idlocation' attribute.</attributeConstraints>
+				<description>
+					A string literal to be used as the identifier for this instance of &lt;invoke&gt;. See
+					<specref ref="IDs"/> for details.  
+				</description>
+			</attribute>
+						
+		<attribute>
+				<name>idlocation</name>
+				<type> Location expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any valid location expression</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with the 'id' attribute.</attributeConstraints>
+				<description>
+					Any data model expression evaluating to a data model location.  See <specref ref="LocationExpressions"/> for details.
+
+				</description>
+			</attribute>
+			<attribute>
+				<name>namelist</name>
+				<type>List of location expressions</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> List of valid location expressions</validValues>
+				<attributeConstraints>				
+					<rfc2119>Must not</rfc2119> occur with the &lt;param&gt; element. 
+				</attributeConstraints>
+				<description>
+					A space-separated list of one or more data model locations to be passed 
+					 as attribute/value pairs
+					to the invoked service.  (The name  of the location is the attribute and the value stored at the location
+					is the value.)  See <specref ref="DataSharing"/> and 
+					<specref ref="LocationExpressions"/> for details. 
+				</description>
+			</attribute>
+			
+		<attribute>
+				<name>autoforward</name>
+				<type>boolean</type>
+				<required> false</required>
+				<defaultValue>false</defaultValue>
+				<validValues> true or false </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          A flag indicating whether to forward events to the invoked process.  See below for details.            
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

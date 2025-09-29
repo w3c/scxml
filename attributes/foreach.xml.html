@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>array</td><td>true</td><td/><td> Value expression</td><td>none</td><td>A value expression that evaluates to an iterable collection.  </td><td>
+					The &lt;foreach&gt; element will iterate over a shallow copy of this collection.
+				</td></tr><tr><td>item</td><td>true</td><td/><td> xsd:string</td><td>none</td><td>Any variable name that is valid in the specified data model. </td><td>
+					A variable that stores a different item of the collection 
+					in each iteration of the loop. 
+					
+				</td></tr><tr><td>index</td><td>false</td><td/><td> xsd:string</td><td>none</td><td>Any variable name that is valid in the specified data model.  </td><td>
+					A variable that stores the current iteration index upon each iteration of the foreach loop.  		
+				</td></tr></tbody></table>

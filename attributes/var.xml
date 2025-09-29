@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 8.2.1.2 Var -->
+	<element>
+		<name>var</name>
+		<attributes>
+			<attribute>
+				<name>name</name>
+				<type>Variable name</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid Variable name </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					Indicates the name of the variable.
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>expr</name>
+				<type>Expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid Expression</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					Indicates the new value of the variable. This is the initial value. 
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

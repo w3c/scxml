@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>name</td><td> true </td><td/><td>NMTOKEN</td><td>none</td><td> A string literal </td><td>
+         The name of the key.  
+				</td></tr><tr><td>expr</td><td>false</td><td>May not occur with 'location'</td><td>value expression</td><td>none</td><td> Valid value expression</td><td>
+A value expression (see <specref ref="ValueExpressions"/>) that is evaluated to 
+provide the value.  
+				</td></tr><tr><td>location</td><td>false</td><td>May not occur with 'expr'</td><td>location expression</td><td>none</td><td> Valid location expression</td><td>
+A location expression (see <specref ref="LocationExpressions"/>) that specifies
+         the location in the datamodel to retrieve the value from.  
+				</td></tr></tbody></table>

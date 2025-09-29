@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- join -->
+	<element>
+		<name>joiny</name>
+		<attributes>
+			<attribute>
+				<name>ID</name>
+				<type>ID</type>
+				<required> false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid state ID </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+             Identifier for this pseudo-state.  If present it must be unique 
+            within the document. 
+				</description>
+				</attribute>
+			</attributes>
+		</element>
+  </elements>

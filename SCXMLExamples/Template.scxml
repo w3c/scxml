@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<scxml version="1.0" xmlns="http://www.w3.org/2005/SCXML"> 
+  <!-- 
+  -
+  - This is our template state. 
+  - We end up referencing this in the 
+  - Main.scxml code. 
+  -
+  -->
+  <state id="Template" final="true">
+    <onentry>
+      <log expr="'Loaded the template'"/>
+    </onentry>
+  </state>
+</scxml>

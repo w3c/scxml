@@ -1,0 +1,13 @@
+<scxml:message xmlns:scxml="http://www.w3.org/2005/07/scxml" version="1.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.w3.org/2005/07/scxml scxml-message.xsd"
+       source="http://scxml-processors.example.com/session1"
+       target="http://scxml-processors.example.com/session2"
+       sendid="send-123">
+  <scxml:payload xmlns:csta="http://www.ecma.ch/standards/ecma-323/csta">
+    <csta:MakeCall>
+      <csta:callingDevice>22343</csta:callingDevice>
+      <csta:calledDirectoryNumber>18005551212</csta:calledDirectoryNumber>
+    </csta:MakeCall>
+  </scxml:payload>
+</scxml:message>

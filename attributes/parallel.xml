@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section parallel Var -->
+	<element>
+		<name>parallel</name>
+		<attributes>
+			<attribute>
+				<name>id </name>
+				<type>ID</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A valid id as defined in <bibref ref="Schema"/> </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					The identifier for this state.  See <specref ref="IDs"/> for details.
+				</description>
+			</attribute>
+
+
+		</attributes>
+	</element>
+</elements>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 8.2.1.3 Assign -->
+	<element>
+		<name>assign</name>
+		<attributes>
+			<attribute>
+				<name>name</name>
+				<type>Left Hand Side Expression</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues>  Variable </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					An left hand side expression evaluating to a previously defined variable.
+					The value of the attribute will receive the result of the <code>expr</code> attribute.
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>expr</name>
+				<type> Expression</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid  Expression</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					Indicates the new value of the variable.
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

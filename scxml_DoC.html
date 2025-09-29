@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN">
+<head>
+    <title>SCXML: Last Call Disposition of Comments</title>
+    <link rel='stylesheet' type='text/css' href='http://www.w3.org/StyleSheets/general.css' />
+    <style type='text/css'>  
+    .indent {  
+        margin: 30px;  
+    }  
+    .indentpre {  
+        margin: 30px;  
+        background-color: AliceBlue   
+    }  
+    
+    .NA {  
+    }  
+    .ACCEPTED {  
+        background-color: Aquamarine 
+    }  
+    .REJECTED {  
+        background-color: LightSkyBlue  
+    }  
+    .CLARIFICATION {  
+        background-color: DarkSeaGreen   
+    }  
+    .DROPPED  {  
+        background-color: Yellow    
+    }  
+    .DEFERRED {  
+        background-color: Gainsboro 
+    }  
+    </style>
+  </head>
+  <body bgcolor='#ffffff'>
+    <div class='head'>
+      <p>
+        <a href="http://www.w3.org">
+          <img width='72' height='48' alt='W3C' src='http://www.w3.org/Icons/w3c_home' />
+        </a>
+      </p>
+      <h1 id='title' style='text-align: center'>SCXML: Last Call Disposition of Comments</h1>
+      <dl>
+        <dt>This version</dt>
+        <dd>24 March 2015</dd>
+        <dt>Editor</dt>
+        <dd>Jim Barnett, Genesys</dd>
+      </dl>
+    </div>
+    <h2>Abstract</h2>
+    <p>This document reflects all issues raised since the publication of the Second Last Call Working Draft on August 1, 2013. 
+    	 No issues prior to that point are included because the Second Last Call specifically requested that any remaining outstanding 
+    	issues from the First Last Call be resubmitted in order to be considered for the Second Last Call. Comments were provided by 
+    	Voice Browser Working Group members, other W3C Working Groups, and the public via the
+      <a href='mailto:www-voice-request@w3.org'>www-voice.org</a>(
+      <a href='http://lists.w3.org/Archives/Public/www-voice/'>archive</a>) mailing list.
+    </p>
+    <h2>Status</h2>
+    <p>This document of the W3C's Voice Browser Working Group describes the disposition of comments as of 24 March 2015 on the 
+      <a href='http://http://www.w3.org/TR/2013/WD-scxml-20130801//'>State Chart XML (SCXML): State Machine Notation for Control Abstraction.</a>It may be updated, replaced or rendered obsolete by other W3C documents at any time.
+    </p>
+    <p>For background on this work, please see the 
+      <a href='http://www.w3.org/2006/12/voice-charter.html'>Voice Browser Working Group Charter.</a>
+    </p>
+ 
+    <table border='1'>
+      <tr>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='ACCEPTED'>Comment was accepted</td>
+      </tr>
+      <tr>
+        <td class='TREJECTED'>REJECTED</td>
+        <td class='REJECTED'>We did not make the requested change.</td>
+      </tr>
+      <tr>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='CLARIFICATION'>Comment only required a clarification.</td>
+      </tr>
+      <tr>
+        <td class='DROPPED'>DROPPED</td>
+        <td class='DROPPED'>The feature in question was dropped from the spec.</td>
+      </tr>
+      <tr>
+        <td class='DEFERRED'>DEFERRED</td>
+        <td class='DEFERRED'>The feature in question was deferred to a future version.</td>
+      </tr>
+    </table>
+    <p>Results:</p>
+    <table border='1'>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Date Opened</th>
+        <th>Last Updated</th>
+        <th>Disposition</th>
+        <th>Acceptance</th>
+        <th>Related Issues</th>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-835'>ISSUE-835</a>
+        </td>
+        <td>Miscellaneous Typos and other Editorial Comments</td>
+        <td>2013-11-11</td>
+        <td title='ISSUE-835'>2013-11-11</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-836'>ISSUE-836</a>
+        </td>
+        <td>Comments from the MultiModal Group</td>
+        <td>2013-11-12</td>
+        <td title='ISSUE-836'>2013-11-11</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-837'>ISSUE-837</a>
+        </td>
+        <td>PFWG review of SCXML </td>
+        <td>2013-11-12</td>
+        <td title='ISSUE-837'>2013-11-11</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      
+  
+      <tr>
+        <td>
+          <a href='#ISSUE-838'>ISSUE-838</a>
+        </td>
+        <td>Request for invocation-started event </td>
+        <td>2014-01-03</td>
+        <td title='ISSUE-838'>2014-01-15</td>
+        <td class='DEFERRED'>DEFERRED</td>
+        <td class='EXPLICIT'>EXPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-839'>ISSUE-839</a>
+        </td>
+        <td>Suggestions for onentry/onexit tags </td>
+        <td>2014-01-03</td>
+        <td title='ISSUE-838'>2014-01-15</td>
+        <td class='REJECTED'>REJECTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href='#ISSUE-840'>ISSUE-840</a>
+        </td>
+        <td>More suggestions for onentry/onexit tags </td>
+        <td>2014-01-29</td>
+        <td title='ISSUE-840'>2014-01-29</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='EXPLICIT'>EXPLICIT</td>
+        <td>NONE</td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href='#ISSUE-841'>ISSUE-841</a>
+        </td>
+        <td>What is the state configuration during onentry/exit is executed? </td>
+        <td>2014-02-23</td>
+        <td title='ISSUE-841'>2014-02-23</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href='#ISSUE-842'>ISSUE-842</a>
+        </td>
+        <td>Invoking on stable configuration but sending on entry </td>
+        <td>2014-02-25</td>
+        <td title='ISSUE-842'>2014-02-25</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='EXPLICIT'>EXPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+                <td>
+          <a href='#ISSUE-843'>ISSUE-843</a>
+        </td>
+        <td>Definition of entry set </td>
+        <td>2014-03-07</td>
+        <td title='ISSUE-843'>2014-03-07</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='EXPLICIT'>EXPLICIT</td>
+        <td>NONE</td>
+      </tr>
+        
+      <tr>
+        <td>
+          <a href='#ISSUE-844'>ISSUE-844</a>
+        </td>
+        <td>History transition executable content - when is it executed?</td>
+        <td>2014-03-24</td>
+        <td title='ISSUE-844'>2014-05-22</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-845'>ISSUE-845</a>
+        </td>
+        <td>Child states exited, not re-entered after targetless transition in parent state</td>
+        <td>2014-03-25</td>
+        <td title='ISSUE-845'>2014-05-22</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+        
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-846'>ISSUE-846</a>
+        </td>
+        <td>How many transition tags are allowed under initial?</td>
+        <td>2014-04-27</td>
+        <td title='ISSUE-846'>2014-05-22</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+          <a href='#ISSUE-850'>ISSUE-850</a>
+        </td>
+        <td>SCXML Algorithm minor markup tweaks</td>
+        <td>2014-06-28</td>
+        <td title='ISSUE-850'>2014-08-01</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+                <a href='#ISSUE-851'>ISSUE-851</a>
+        </td>
+        <td>Interpretation Algorithm calls some() on an OrderedSet </td>
+        <td>2014-06-24</td>
+        <td title='ISSUE-851'>2014-08-01</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+
+      </tr>
+      <tr>
+        <td>
+                <a href='#ISSUE-852'>ISSUE-852</a>
+        </td>
+        <td>Algorithm bug in addDescendantStatesToEnter? </td>
+        <td>2014-10-11</td>
+        <td title='ISSUE-852'>2014-10-14</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>EXPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+                <a href='#ISSUE-853'>ISSUE-853</a>
+        </td>
+        <td> 	Paste-o in spec?? </td>
+        <td>2014-10-18</td>
+        <td title='ISSUE-853'>2014-10-20</td>
+        <td class='ACCEPTED'>ACCEPTED</td>
+        <td class='IMPLICIT'>IMPLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+                <a href='#ISSUE-854'>ISSUE-854</a>
+        </td>
+        <td> 	Discrepancy in normative XPath references (XPath 1 and 2)? </td>
+        <td>2014-10-18</td>
+        <td title='ISSUE-854'>2014-10-20</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='EXLICIT'>EXLICIT</td>
+        <td>NONE</td>
+      </tr>
+      <tr>
+        <td>
+                <a href='#ISSUE-855'>ISSUE-855</a>
+        </td>
+        <td> 	Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes </td>
+        <td>2014-10-28</td>
+        <td title='ISSUE-855'>2014-10-31</td>
+        <td class='CLARIFICATION'>CLARIFICATION</td>
+        <td class='EXLICIT'>EXLICIT</td>
+        <td>NONE</td>
+
+      </tr>
+
+    </table>
+    <h2>Issue detail</h2>
+    <hr />
+    <h3 id='ISSUE-835'>ISSUE-835 - Miscellaneous Typos and other Editorial Comments</h3>
+    <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='http://www.w3.org/Voice/Group/track/issues/835?changelog'>ISSUE-835</a>
+    <h4>Opened: 2013-11-11</h4>
+    <h4>Last Updated: 2013-11-11 04:52</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>(15 minor editorial comments, plus some comments on the IR tests.) </p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2013-11-11 04:44: </b>
+        <pre>DISPOSITION=ACCEPTED</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2013-11-11 04:52: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013JulSep/0011.html'>ISSUE-835</a>
+      </li>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013JulSep/0012.html'>ISSUE-835</a>
+      </li>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013JulSep/0013.html'>ISSUE-835</a>
+      </li>
+    </ul>
+    <hr />
+    <h3 id='ISSUE-836'>ISSUE-836 - Comments from the MultiModal Group</h3>
+    <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='http://www.w3.org/Voice/Group/track/issues/836?changelog'>ISSUE-836</a>
+    <h4>Opened: 2013-11-12</h4>
+    <h4>Last Updated: 2013-11-12 12:45</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>The W3C Multimodal Interaction Working Group has reviewed the second LCWD of<br/>
+SCXML [1] and believes that it is a very suitable implementation language<br/>
+for Interaction Managers (IM's) in systems conforming to the Multimodal<br/>
+Architecture (MMI Architecture) specification [2]. In multimodal systems,<br/>
+IM's coordinate the activities of  Modality Components (MC's), such as<br/>
+speech, GUI, and gesture interpretation components, among others. SCXML is<br/>
+an excellent complement to the event-based MMI Architecture since events are<br/>
+one of the basic concepts of SCXML and most SCXML transitions are triggered<br/>
+by events. These could include, for example, MMI Life Cycle events coming<br/>
+from MC's. The declarative nature of SCXML also greatly simplifies development of<br/>
+multimodal applications which may be complex and involve the interaction of<br/>
+a number of MC's, each encapsulating additional complex functionality of<br/>
+their own.<br/>
+<br/>
+[1] SCXML:  &lt;http://www.w3.org/TR/2013/WD-scxml-20130801/&gt;http://www.w3.org/TR/2013/WD-scxml-20130801/<br/>
+[2] MMI Architecture and Interfaces:   &lt;http://www.w3.org/TR/mmi-arch/&gt;http://www.w3.org/TR/mmi-arch/<br/>
+<br/>
+Best regards,<br/>
+Deborah Dahl<br/>
+W3C Multimodal Interaction Working Group Chair</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2013-11-12 12:45: </b>
+        <pre>DISPOSITION=ACCEPTED</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2013-11-12 12:45: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013OctDec/0000.html'>ISSUE-836: Comments from the MultiModal Group [SCXML-LC2-Comments]</a>
+      </li>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013OctDec/0002.html'>ISSUE-836</a>
+      </li>
+    </ul>
+    <hr />
+    <h3 id='ISSUE-837'>ISSUE-837 - PFWG review of SCXML </h3>
+    <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='http://www.w3.org/Voice/Group/track/issues/837?changelog'>ISSUE-837</a>
+    <h4>Opened: 2013-11-12</h4>
+    <h4>Last Updated: 2013-11-12 12:49</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Below are comments prepared by the Protocols and Formats Working Group<br/>
+on "State Chart XML (SCXML): State Machine Notation for Control<br/>
+Abstraction" Last Call Working Draft of 1 August 2013<br/>
+http://www.w3.org/TR/2013/WD-scxml-20130801/. 
+Consensus to send as PFcomments is archived at<br/>
+https://www.w3.org/2013/10/16-pf-minutes.html#item02.<br/>
+<br/>
+This is an unusual review as we are not talking about accessibility as a<br/>
+specific "this is an inaccessible feature" however, but the issues,<br/>
+although more global, are just as important. Overall we are concerned<br/>
+with how people with hearing, speech and cognitive impairments are going<br/>
+to be affected by these applications and what requirements are necessary<br/>
+so that they can be used by people with different user scenarios. For<br/>
+example, speech triggered applications will need an option to type text<br/>
+etc. In the mean time we suggest the following:<br/>
+*Issue one.* We would like to see a standard way to reach a human<br/>
+operator for additional assistance and accessibility support.<br/>
+Many people a struggle with critical services and help because of<br/>
+complex phone answering systems. People with even mild hearing, speech<br/>
+or cognitive challenges are especially disadvantaged and can be excluded<br/>
+from these services.<br/>
+<br/>
+As many emergency and critical services are now using these automated<br/>
+answering systems, we need to make them as easy as possible to use on<br/>
+any phone. Further, people abilities vary and deteriorate at times<br/>
+stress or of ill health. People therefore need to be familiar and<br/>
+comfortable with a standard way to reach an operator, so that they can<br/>
+easily get service in times of stress or panic. We therefore propose to<br/>
+standardize how a user can reach a human on all phone systems. We<br/>
+believe this would make automated phone systems usable by as many people<br/>
+as possible.<br/>
+<br/>
+We propose that a digit or combination (such as the "zero" digit) be<br/>
+standardize for reaching a human operator on all phone systems with<br/>
+automatic menus. On any answering system, pressing a "0" would take you<br/>
+to a human operator.<br/>
+<br/>
+For example if the zero digit was standardized to reach a human, then in<br/>
+any conformant system:<br/>
+<br/>
+&nbsp;&nbsp;* a, At any time on any system "0" will take the user to a human operator,<br/>
+&nbsp;&nbsp;* b, the "zero" digit can not be assigned for anything else and hence can not support a follow on menu, and<br/>
+&nbsp;&nbsp;* c, in every system file there is a default extension for the "zero"    digit identified, without which the file is invalid and will not work at all.<br/>
+<br/>
+<br/>
+Anecdotal evidence: Places that I have not managed to reach a human<br/>
+operator after five attempts include the police and my doctors<br/>
+office. Typically it takes me three of four attempts to reach the right<br/>
+extension at my health service!<br/>
+<br/>
+*Issue two*. We suggest standardizing error recovery from the user<br/>
+perspective.<br/>
+With these systems often people with disabilities are more likely to<br/>
+make errors. We then get thrown off the line (see above ) and need to<br/>
+start again. There should be a easy way to recover from an error, such<br/>
+as when ever there is an error the user has an option to either<br/>
+<br/>
+&nbsp;&nbsp;* return to the main menu,<br/>
+&nbsp;&nbsp;* the previous menu or<br/>
+&nbsp;&nbsp;* a human operator for help (most important)<br/>
+<br/>
+FYI we are putting together a task force to addressees accessibility and<br/>
+cognitive disabilities. If this is of interest to any of your members<br/>
+please let us know!<br/>
+--<br/>
+<br/>
+Michael Cooper<br/>
+Web Accessibility Specialist<br/>
+World Wide Web Consortium, Web Accessibility Initiative<br/>
+E-mail cooper@w3.org &lt;mailto:cooper@w3.org&gt;<br/>
+Information Page &lt;http://www.w3.org/People/cooper/&gt;</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2013-11-12 12:49: </b>
+        <pre>DISPOSITION=CLARIFICATION</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2013-11-12 12:49: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013OctDec/0001.html'>ISSUE-837: PFWG review of SCXML  [SCXML-LC2-Comments]</a>
+      </li>
+      <li>
+        <b>2013-11-11 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2013OctDec/0002.html'>ISSUE-837 </a>
+      </li>
+    </ul>
+    
+       <hr />
+ 
+        <h2>Issue detail</h2>
+    <hr />
+    <h3 id='ISSUE-838'>ISSUE-838 - Miscellaneous Typos and other Editorial Comments</h3>
+    <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/838'>ISSUE-838</a>
+    <h4>Opened: 2014-01-20</h4>
+    <h4>Last Updated: 2014-01-21 04:52</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>as we continue to use SCXML for various applications, there is one deficiency<br/>
+that always bugged us. Consider that you have a state that will invoke<br/>
+something and you'd like to send some event to it right-away. You cannot use<br/>
+&lt;send target="#_invokeid"&gt; in an onentry element as the invoker will not yet<br/>
+exist, it is only invoked when a stable configuration is reached (see<br/>
+procedure mainEventLoop in the draft). Thus forcing you to use a delay<br/>
+attribute.
+<br/>
+[...]
+<br/>
+Is anyone else bugged by this behavior and resorted to the delayed send<br/>
+idiom, is there something more straight-forward or did we misinterpret the<br/>
+SCXML draft at some point?
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-21: </b>
+        <pre>DISPOSITION=DEFERRED</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2013-11-11: </b>
+        <pre>ACCEPTANCE=EXPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0007.html'>Invoking on stable configuration but sending on entry</a>
+      </li>
+      <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0008.html'>Re: Invoking on stable configuration but sending on entry</a>
+      </li>
+      <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0009.html'>Re: Invoking on stable configuration but sending on entry </a>
+      </li>
+           <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0010.html'>Re: Invoking on stable configuration but sending on entry </a>
+      </li>
+           <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0011.html'>Re: Invoking on stable configuration but sending on entry </a>
+      </li>
+           <li>
+        <b>2014-01-20 07:00: </b>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0012.html'>Re: Invoking on stable configuration but sending on entry </a>
+      </li>
+    </ul>
+    <hr />
+       <h3 id='ISSUE-839'>ISSUE-839 - Allow only Single onentry, onexit elements. </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/839'>ISSUE-839</a>
+    <h4>Opened: 2014-01-20</h4>
+    <h4>Last Updated: 2014-01-21 04:52</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>
+We are working on an SCXML-Editor. Between reading the draft and parsing the scxml we noticed that onentry/onexit tags can occur 0 till inf times for a state.<br/>
+<br/>
+Would it not be better to have 0 or 1 occurrence?<br/>
+<br/>
+That would avoid the question: How can I exit a state multiple times without re-entering before?<br/>
+<br/>
+The code from each handler would then be concatenated.<br/>
+<br/>
+Please note either way:<br/>
+The final state 3.7.2 ( http://www.w3.org/TR/scxml/#final )<br/>
+ considers one entry of onentry/onexit tags only.<br/>
+While the schema does not:<br/>
+http://www.w3.org/2011/04/SCXML/scxml-core-strict.xsd
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2013-11-12 12:49: </b>
+        <pre>DISPOSITION=REJECTED</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2013-11-12 12:49: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0003.html'>Re: Suggestions for onentry/onexit tags</a>
+      </li>
+      <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0004.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+           <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0006.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+    </ul>
+    
+    <hr/>
+    
+          <h3 id='ISSUE-840'>ISSUE-840 - More suggestions for onentry/onexit elements. </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/840'>ISSUE-840</a>
+    <h4>Opened: 2014-01-20</h4>
+    <h4>Last Updated: 2014-01-21 04:52</h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>
+Your reasoning is completely valid and understood. My only concern is<br/>
+the semantic about onexit/onentry.<br/>
+Even if it is well defined in the current version, I can't deny that it<br/>
+is a bit unnatural to call a second onexit block<br/>
+My suggestions to combine functionality and modularity would be as follows:<br/>
+&lt;onentry&gt;<br/>
+&nbsp;&nbsp;     &lt;action&gt; Code of the first onentry block &lt;/action&gt;<br/>
+&nbsp;&nbsp;     &lt;action&gt; ... 2nd entry block &lt;/action&gt;<br/>
+&lt;/onentry&gt;<br/>
+<br/>
+Variation:<br/>
+Define actions in LLCA (or separate file for re-usage):<br/>
+&lt;actions&gt;<br/>
+&nbsp;&nbsp;     &lt;action id="a1"&gt; Codeblock &lt;/action&gt;<br/>
+&nbsp;&nbsp;     &lt;action id="a2"&gt; Codeblock &lt;/action&gt;<br/>
+&lt;/actions&gt;<br/>
+<br/>
+We just reference to the actions:<br/>
+&lt;onentry&gt;<br/>
+&nbsp;&nbsp;     &lt;action id="a1" /&gt;<br/>
+&nbsp;&nbsp;     &lt;action id="a2" /&gt;<br/>
+&lt;/onentry&gt;<br/>
+<br/>
+ From here we have a couple of advantages:<br/>
+- Code block may be reused in the same file<br/>
+- We may define all code blocks for onentry/onexit in separate file and<br/>
+share this between different statecharts.<br/>
+- The semantic is a bit cleaner (Maybe that is a personal view)<br/>
+<br/>
+I am very aware of my inexperience when it comes to xml/statecharts and<br/>
+I am fine with what ever solution you come up with.<br/>
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>DISPOSITION=CLARIFICATION</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>ACCEPTANCE=EXPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0013.html'>Re: Suggestions for onentry/onexit tags</a>
+      </li>
+      <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0014.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+           <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0015.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+                <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0016.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+                <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0017.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+                <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0018.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+                <li>
+
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0019.html'>Re: Suggestions for onentry/onexit tags </a>
+      </li>
+    </ul>
+    
+              <h3 id='ISSUE-841'>ISSUE-841 - What is the state configuration during onentry/exit is executed? </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/841'>ISSUE-841</a>
+    <h4>Opened: 2014-02-24</h4>
+    <h4>Last Updated: 2014-02-24 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>
+Hello,<br/>
+<br/>
+When we have S1 -> S2, we execute: onexit S1, T, onentry S2. My<br/>
+question is, are we already in S2 during execution of the entry<br/>
+handlers and are we still in S1 during onexit is running?<br/>
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>DISPOSITION=CLARIFICATION</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0024.html'>What is the state configuration during onentry/exit is executed?</a>
+      </li>
+     <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0025.html'>Re: What is the state configuration during onentry/exit is executed?</a>
+      </li>
+    </ul>
+    
+    
+    
+              <h3 id='ISSUE-842'>ISSUE-842 - Invoking on stable configuration but sending on entry </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/842'>ISSUE-842</a>
+    <h4>Opened: 2014-02-25</h4>
+    <h4>Last Updated: 2014-02-25 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>
+Hi again,<br/>
+<br/>
+as the invoke semantics turn out to be a major source of confusion for SCXML authors, we are scratching our heads as to why the group decided for this particular semantics. Can we read up on the rationale somewhere?<br/>
+<br/>
+Best regards<br/>
+Stefan
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>DISPOSITION=CLARIFICATION</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>ACCEPTANCE=EXPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0028.html'>Re: Invoking on stable configuration but sending on entry</a>
+      </li>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0029.html'>Re: Invoking on stable configuration but sending on entry</a>
+      </li>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0030.html'>Re: Invoking on stable configuration but sending on entry</a>
+      </li>
+    </ul>
+    
+                  <h3 id='ISSUE-843'>ISSUE-843 - Definition of entry set </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/843'>ISSUE-843</a>
+    <h4>Opened: 2014-03-07</h4>
+    <h4>Last Updated: 2014-03-11 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>
+Hi there,
+
+After reading the current SCXML spec, I find the definition of "entry set" 
+confusing, possible incorrect.
+
+In section 3.11, for [Definition: The entry set ...] the following is stated:
+
+   [...] Otherwise, it consists of all members of the transition's complete 
+target set that are not currently active. [..]
+
+Maybe I'm missing something obvious here, but it seem to me this can't be 
+correct. Why are only 'not currently active' states considered?
+A currently active state can be both exited and (re)entered as result of a 
+single transition, so should (and IMO is to) be included in the entry set as well.
+
+The "computeEntrySet" procedure in appendix A also doesn't reflect this AFAICT, 
+only determining the entry set based on the transition targets only, not the (at 
+that time already exited) current active states
+
+Thanks,
+
+Ate
+
+(working on Apache Commons SCXML 2.0 towards spec compliance)
+
+
+</p>
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>DISPOSITION=CLARIFICATION</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>ACCEPTANCE=EXPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0032.html'>Remark about SCXML "entry set" definition (section 3.11)</a>
+      </li>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0033.html'>Re: Remark about SCXML "entry set" definition (section 3.11)</a>
+      </li>
+      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0035.html'>Re: Remark about SCXML "entry set" definition (section 3.11)</a>
+      </li>
+    </ul>
+    
+                      <h3 id='ISSUE-844'>ISSUE-844 -  	History transition executable content - when is it executed? </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/844'>ISSUE-844</a>
+    <h4>Opened: 2014-03-24</h4>
+    <h4>Last Updated: 2014-05-22 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>While implementing the SCXML Algorithm, I noticed the handling/processing of
+executable content of a History transition isn't taken care of yet.
+Neither in the Algorithm nor in wording (when) in the specification.
+
+The addDescendantStatesToEnter procedure dereferences History states, so these
+History states correctly don't end up in the statesToEnter, but then neither
+will their possible transition executable content be processed.
+
+And as important: when should History transition executable content be processed?
+
+It seems like an obvious choice that it should happen after the History parent
+state onentry and before any History default targets onentry execution.
+
+Any opinions?
+
+At any rate, I think this needs to be clarified in the specification, and also
+integrated in the Algorithm.</p>
+   <h4>Notes:</h4>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>DISPOSITION=ACCEPTED</pre>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b>2014-01-29: </b>
+        <pre>ACCEPTANCE=IMPLICIT</pre>
+      </li>
+    </ul>
+    <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0063.html'>History transition executable content - when is it executed?</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0064.html'>re: History transition executable content - when is it executed?</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0065.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0066.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0067.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0068.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0069.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0070.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0071.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0072.html'>RE: History transition executable content - when is it executed?</a>
+      </li>
+                    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0076.html'>updated algorithm</a>
+      </li>
+    </ul>
+      
+                           <h3 id='ISSUE-845'>ISSUE-845 -  	Child states exited, not re-entered after targetless transition in parent state</h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/845'>ISSUE-845</a>
+    <h4>Opened: 2014-03-24</h4>
+    <h4>Last Updated: 2014-05-22 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Hi,
+
+I've noticed a problem with test403b where event2 is never matched in state
+p0s1.
+On closer inspection it appears that the interpretation algorithm currently
+causes p0s1 and p0s2 to exit when p0's inner transition is taken, but they
+are not re-entered thereafter.
+
+Given p0's inner transition is targetless, should p0s1 and p0s2 be exited
+in the first place?</p>
+   <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0073.html'>Child states exited, not re-entered after targetless transition in parent state</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0074.html'>Re: Child states exited, not re-entered after targetless transition in parent state</a>
+      </li>
+                	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0075.html'>Re: Child states exited, not re-entered after targetless transition in parent state</a>
+      </li>
+                	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014JanMar/0076.html'>updated algorithm</a>
+      </li>
+    </ul>
+      
+                           <h3 id='ISSUE-846'>ISSUE-846 -  	How many transition tags are allowed under initial ?</h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/846'>ISSUE-846</a>
+    <h4>Opened: 2014-04-27</h4>
+    <h4>Last Updated: 2014-05-22 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>How many transition tags are allowed under initial?</p>
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0045.html'>How many transition tags are allowed under initial?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0046.html'>Re: How many transition tags are allowed under initial?</a>
+      </li>
+      </ul>
+      
+  <h3 id='ISSUE-850'>ISSUE-850 -  	SCXML Algorithm minor markup tweaks</h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/850'>ISSUE-850</a>
+    <h4>Opened: 2014-06-28</h4>
+    <h4>Last Updated: 2014-08-01 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>1) The spec uses “documentOrder” in two places (selectEventlessTransitions and selectTransitions), where it presumably should use “entryOrder”.
+
+2) The spec uses isScxmlState() in exitInterpreter() but isSCXMLElement() in enterStates(); the latter should probably be isScxmlState() for consistency with other is____State() functions.
+
+3) Some of the functions use three spaces for indentation, some use four. Some are mixed (e.g. first line of exitStates versus other lines). It would be nice if this was consistent (but not necessary).
+
+4) There are a few indentation issues that might cause confusion:
+4a) In exitStates() the line beginning with "historyValue[h.id]” does not match any other indentation levels.
+4b) In computeExitSet() the 3rd line is indented more than the 2nd, but I believe it should not be.
+4c) In getEffectiveTargetStates() the header is missing a space after ‘function’
+4d) In getEffectiveTargetStates() the outer if/else is not aligned vertically.
+4e) The comment in removeConflictingTransitions() is indented in an odd manner.
+
+5) There are two statements ending in semicolons. I believe that these should not be present.
+
+6) In computeExitSet() the condition for the ‘if' statement is parenthesized. This is the only case where this is used.</p>
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0128.html'>SCXML Algorithm minor markup tweaks</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0133.html'>Re: SCXML Algorithm minor markup tweaks</a>
+      </li>
+    </ul>
+      
+  <h3 id='ISSUE-851'>ISSUE-851 -  	Interpretation Algorithm calls some() on an OrderedSet</h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/851'>ISSUE-851</a>
+    <h4>Opened: 2014-06-24</h4>
+    <h4>Last Updated: 2014-08-01 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Trace of a particular code path in the algorithm causes an OrderedSet() to have some() called on it, but this method is not defined for OrderedSet.
+
+enterStates():
+   statesToEnter = new OrderedSet()
+   …
+   computeEntrySet(…,statesToEnter,…)
+
+computeEntrySet(…,statesToEnter,…):
+   …
+   addDescendantStatesToEnter(…,statesToEnter,…)
+
+addDescendantStatesToEnter(state,statesToEnter,statesForDefaultEntry):
+   …
+   if not statesToEnter.some(…)
+
+
+Either some() needs to be defined for OrderedSet, or the line above needs to become:
+    if not statesToEnter.toList().some(…)
+
+
+The same problem exists in addAncestorStatesToEnter()
+
+(After getting quite far in the tests with LXSC I failed the 3rd preemption test, and decided to rewrite the core interpreter to match the latest spec algorithm in a very direct manner.)</p>
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0109.html'>Interpretation Algorithm calls some() on an OrderedSet</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0112.html'>Re: Interpretation Algorithm calls some() on an OrderedSet</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0129.html'>Re: Interpretation Algorithm calls some() on an OrderedSet</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0130.html'>Re: Interpretation Algorithm calls some() on an OrderedSet</a>
+      </li>
+                     	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014AprJun/0132.html'>Re: Interpretation Algorithm calls some() on an OrderedSet</a>
+      </li>
+    </ul>
+      
+   <h3 id='ISSUE-852'>ISSUE-852 -  	Algorithm bug in addDescendantStatesToEnter? </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/852'>ISSUE-852</a>
+    <h4>Opened: 2014-10-11</h4>
+    <h4>Last Updated: 2014-10-14 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Hi there,
+
+I think I detected a bug in the addDescendantStatesToEnter algorithm in the
+specification concerning *when* to invoke the addAncestorsStatesToEnter.
+
+Currently the algorithm defines the following logic for a compound state,
+after having added it to the statesForDefaultEntry:
+
+     for s in getEffectiveTargetStates(state.initial.transition):
+         addDescendantStatesToEnter(s,statesToEnter,statesForDefaultEntry, 
+defaultHistoryContent)
+         addAncestorStatesToEnter(s, state, statesToEnter, 
+statesForDefaultEntry, defaultHistoryContent)
+
+If not first for all effective target states addDescendantStatesToEnter is 
+executed, the addAncestorStatesToEnter might,
+when in involves an ancestor parallel with nested compound states of which one 
+also happens to be one of the effective
+desendant target *but not yet resolved*, end up initializing a different 
+(default) sibling child of such a compound state.
+End result: an invalid configuration with a compound state having multiple 
+active child states.
+
+I detected this issue when testing irp test364, which indeed defines such a 
+SCXML document.
+If the algorithm is implemented as currently defined in the specification, 
+you'll end up with both s11p121 and s11p122
+being on the statesToEnter set (or s11p111 and s11p112, depending on the 
+processing order of the s1 initial targets).
+
+In Apache Commons SCXML I've implemented a legal configuration check before 
+executing enterStates, and that fails on
+this point for irp test364.
+
+Maybe important to note is that if I disable the check, the test actually 
+passes, so maybe others might have this same
+bug but going unnoticed?
+
+Solving this bug however should be pretty trivial.
+To ensure explicit descendant target states are recorded first, I just changed 
+the above logic to:
+
+     for s in getEffectiveTargetStates(state.initial.transition):
+         addDescendantStatesToEnter(s,statesToEnter,statesForDefaultEntry, 
+defaultHistoryContent)
+     for s in getEffectiveTargetStates(state.initial.transition):
+         addAncestorStatesToEnter(s, state, statesToEnter, 
+statesForDefaultEntry, defaultHistoryContent)
+
+And I did the same for the two similar/same for loops in the handling for 
+history states in addDescendantStatesToEnter
+where likewise both descendant and ancestors states to enter are resolved within 
+a single loop.
+
+Note: the description of addDescendantStatesToEnter actually does seem to say it 
+more correctly where it breaks these
+two separate 'steps' down in two separate sentences:
+
+     Then if state is a compound state, add state to statesForDefaultEntry and 
+recursively call addStatesToEnter on its
+     default initial state(s).
+
+     Then, since the default initial states may not be children of 'state', add 
+any ancestors between the default
+     initial states and 'state'.
+
+The above description at least gives the right direction how this should be 
+implemented, namely as separate consecutive steps,
+but not 'optimized' into a single loop as currently done.
+Confusingly and incorrectly though this description names the 
+"addDescendantStatesToEnter" routine "addStatesToEnter".
+It probably would be good to correct that as well.
+
+Kind regards,
+
+Ate Douma</p>
+
+
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0000.html'>Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0001.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0002.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0003.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                     	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0004.html'>Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0004.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0005.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0006.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0007.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0008.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0009.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0010.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0011.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+                           	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0012.html'>Re: Algorithm bug in addDescendantStatesToEnter?</a>
+      </li>
+    </ul>
+    
+      <h3 id='ISSUE-853'>ISSUE-853 -  	Paste-o in spec? </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/853'>ISSUE-853</a>
+    <h4>Opened: 2014-10-18</h4>
+    <h4>Last Updated: 2014-10-20 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Hi,
+
+>From "3.11 Legal State Configurations and Specifications":
+
+"In a conformant SCXML document, there is an additional requirement on the
+value of the 'initial' attribute of a &lt;state&gt; and on the 'target' of a
+&lt;transition&gt; inside an &lt;initial&gt; element: or &lt;history&gt; pseudo-state; all
+the states must be descendants of the containing &lt;state&gt; or &lt;parallel&gt;
+element."
+
+I'm not a native speaker, but is perhaps the ':' a left-over from a
+previous version where the "or &lt;history&gt; pseudo-state" was not present? I
+think it should maybe be removed?
+
+Maybe also re-word it as "inside an &lt;initial&gt; or &lt;history&gt; element"?
+
+Elvis
+</p>
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0015.html'>Paste-o in spec?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0017.html'>Re: Paste-o in spec?</a>
+      </li>
+</ul>
+
+     <h3 id='ISSUE-854'>ISSUE-854 -  	Discrepancy in normative XPath references (XPath 1 and 2)? </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/854'>ISSUE-854</a>
+    <h4>Opened: 2014-10-18</h4>
+    <h4>Last Updated: 2014-10-20 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Hi folks,
+
+I only just heard about SCXML. I got interested and started reading the
+spec.
+
+In "B.3 The XPath Data Model", the section starts out by referencing XPath
+1.0:
+
+"Implementations that support this data model must support [XPath 1.0]."
+
+But then in "B.3.2 Conditional Expressions" goes on to require XPath 2.0:
+
+"The SCXML Processor must accept any XPath expression as
+a conditional expression and must convert it into its effective
+boolean value as described in section 2.4.3 of the [XPath 2.0]
+specification."
+
+Could someone clarify? Should the first reference be to XPath 2.0 or is the
+discrepancy intended?
+
+Cheers,
+Elvis Stansvik
+</p>
+       <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0016.html'>Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0018.html'>Re: Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0018.html'>Re: Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0019.html'>Re: Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0020.html'>Re: Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+         	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0021.html'>Re: Discrepancy in normative XPath references (XPath 1 and 2)?</a>
+      </li>
+</ul>
+
+    <h3 id='ISSUE-855'>ISSUE-855 -  	Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes </h3>
+   <h4>Tracker (W3C Member only):</h4>
+    <a class='indent' href='https://www.w3.org/Voice/Group/track/issues/855'>ISSUE-855</a>
+    <h4>Opened: 2014-10-28</h4>
+    <h4>Last Updated: 2014-10-31 </h4>
+    <h4>State: closed</h4>
+    <h4>Description:</h4>
+    <p>Hi,
+
+I'm puzzled about the meaning and purpose of the type 'location expression' for
+the &lt;invoke&gt; and &lt;send&gt; namelist attribute and the &lt;param&gt; location attribute in
+the SCXML specification.
+
+The namelist attribute is described in the specification as
+
+"A space-separated list of one or more data model locations to be included as
+attribute/value pairs with the message."
+
+followed with
+
+"(The name of the location is the attribute [...])".
+
+All the examples given in the specification as well as in the IPR tests only
+make use of datamodel data id values as 'names'.
+
+If that is the (only) intended usage, why then should this be of type 'location
+expression' and not more transparently typed as "data element IDs"?
+
+On the other hand, if this really should be interpreted as dynamic location
+expressions *yielding* a datamodel value, then "(The name of the location is the
+attribute [...])" becomes a very complex one, where only the result of the
+expression is a location for which the 'name' has to be derived dynamically.
+
+Currently I presume the first interpretation is intended, but in any case IMO
+the current type definition and description can use some stronger clarification.
+
+
+And I have a somewhat related question concerning the purpose of and distinction
+between the &lt;param&gt; expr and location attributes, which are to be used mutually
+exclusive.
+
+The description for the &lt;param&gt; location attribute says:
+
+"A location expression [...] that specifies the location in the datamodel to
+use as the value."
+
+Taken literally, this actually means the location *itself* should be passed as
+value, not the value *at* the location.
+But I don't think that is the intended purpose, right?
+
+AFAICT the purpose of the location attribute is only to yield the value at the
+specified location, not the location itself.
+But then: why not just and only use the expr attribute always, which should be
+giving the exact same result, if it targets a datamodel location?
+
+Maybe there is some nuance I'm overlooking here, possibly particular to certain
+expression languages, but AFAIK the intend for both the expr and location
+attributes is or should be exactly the same: yield the data value.
+So I'm missing the point why I ever would need to use (and therefore need to
+implement) the location attribute.
+
+I hope I've described my confusion clearly enough :)
+
+Kind regards,
+
+Ate</p>
+      <h4>Related e-mails:</h4>
+    <ul>
+    	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0032.html'>Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+          	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0033.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0033.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0034.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0035.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0036.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0037.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0038.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0039.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0040.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0041.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0051.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0053.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+               	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0042.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+                 	      <li>
+        <a href='http://lists.w3.org/Archives/Public/www-voice/2014OctDec/0052.html'>Re: Question regarding the meaning and purpose of type 'location expression in namelist and param location attributes</a>
+      </li>
+    </ul>
+  </body>
+</html>

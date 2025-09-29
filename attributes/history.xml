@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- history -->
+	<element>
+		<name>history</name>
+		<attributes>
+			<attribute>
+				<name>id</name>
+				<type>ID</type>
+				<required> false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>A valid id as defined in <bibref ref="Schema"/></validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+             Identifier for this pseudo-state.  See <specref ref="IDs"/> for details.
+				</description>
+				</attribute>
+
+
+			<attribute>
+				<name>type</name>
+				<type>enum</type>
+				<required>false</required>
+				<defaultValue>"shallow"</defaultValue>
+				<validValues> "deep" or "shallow"</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          Determines whether the active atomic substate(s) of the current state or only its immediate
+          active substate(s) are recorded.
+				</description>
+			</attribute>
+			
+		</attributes>
+	</element>
+</elements>

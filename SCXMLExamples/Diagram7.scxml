@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<scxml version="1.0" xmlns="http://www.w3.org/2005/SCXML"> 
+
+  <state>
+    <parallel>
+      
+      <state id="S1">
+        <state id="S11">
+          <transition>
+            <target next ="S12"/>
+            <target next="synch1"/>
+          </transition>
+        </state>
+        <state id="S12">
+          <transition>
+            <target next="S13"/>
+            <target next="j1"/>
+          </transition>
+        </state>
+        <state id="S13"/>
+      </state>
+      
+      <state id="S2">
+        <state id="S21">
+          <transition>
+            <target next ="S12"/>
+          </transition>
+        </state>
+        <state id="S22">
+          <transition>
+            <target next="j1"/>
+          </transition>
+        </state>
+        <state id="S23"/>
+      </state>
+            
+      <join id="j1">
+        <transition>
+          <target next="S23"/>
+        </transition>
+      </join>
+      
+      <join id="j2">
+        <transition>
+          <target next="S23"/>
+        </transition>
+      </join>
+      
+    </parallel>
+  </state>
+</scxml>

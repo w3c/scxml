@@ -1,0 +1,40 @@
+<state id="S" initial="s1">
+   <state id="s1" initial="s11">
+      <onentry>
+        <log expr="entering S1"/>
+        </onentry>
+      <onexit>
+         <log expr="'leaving s1'"/>
+     </onexit>
+     
+     <state id="s11">
+       <onentry>
+        <log expr="entering s11"/>
+       </onentry>
+        <onexit>
+           <log expr="'leaving s11'"/>
+        </onexit>
+     </state>
+     
+     <transition event="e" target="s11" type="internal">
+        <log expr="'executing transition'"/>
+     </transition>
+
+   </state>
+  
+
+
+==== log output will be ======>
+
+leaving s11
+executing transition
+entering s11
+
+=== if transition were external, log output would be ====>
+
+leaving s11
+leaving s1
+executing transition
+entering s1
+entering s11
+

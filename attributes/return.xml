@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- return -->
+	<element>
+		<name>return</name>
+		<attributes>
+			<attribute>
+				<name>src</name>
+				<type>URI</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any valid URI </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         The URI to which the data elements should be returned.  If it is absent,
+         the data is returned to the the state machine's caller.  The state machine's caller is the external state machine
+         that invoked it with the &lt;invoke&gt; tag, or, failing that, the state machine's environment.
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>namelist</name>
+				<type>whitespace separated list of locations in the datamodel</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any list of locations in the datamodel, where each location
+         is a well-formed path expression.  </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          The data will be returned to the &lt;src&gt; as path followed by
+         the xml tree located at the path.  Default scoping rules apply. If no namelist is present, the returned value 
+         defaults to be the contents of the closest &lt;datamodel&gt; element (following the standard lexical scoping rules.)  
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

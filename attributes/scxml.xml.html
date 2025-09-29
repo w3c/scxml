@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>initial</td><td> false </td><td>none</td><td>IDREFS</td><td>none</td><td> A legal state specification.  See <specref ref="LegalStateConfigurations"/>
+					for details. </td><td>
+        The id of the initial state(s) for the document.  If not specified, 
+        the default initial state is the first child state in document order.
+        </td></tr><tr><td>name</td><td> false </td><td>none</td><td>NMTOKEN</td><td>none</td><td> Any valid NMTOKEN </td><td>
+        The name of this state machine.  It is for purely informational purposes. 
+        </td></tr><tr><td>xmlns</td><td>true</td><td>none</td><td>URI</td><td>none</td><td>The value <rfc2119>must</rfc2119> be "http://www.w3.org/2005/07/scxml". </td><td>
+				</td></tr><tr><td>version</td><td>true</td><td>none</td><td>decimal</td><td>none</td><td>The value <rfc2119>must</rfc2119> be "1.0"</td><td>
+				</td></tr><tr><td>datamodel</td><td>false</td><td>none</td><td>NMTOKEN</td><td>platform-specific</td><td>"null", "ecmascript", "xpath" or other platform-defined values. </td><td>The datamodel that this document requires.  "null" denotes the 
+				Null datamodel, "ecmascript" the ECMAScript datamodel, and "xpath" the XPath datamodel, 
+				as defined in <specref ref="profiles"/>.
+				</td></tr><tr><td>binding</td><td>false</td><td>none</td><td>enum</td><td>"early"</td><td>"early", "late" </td><td>The data binding to use.  See <specref ref="DataBinding"/> for details.
+				</td></tr></tbody></table>

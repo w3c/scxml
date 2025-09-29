@@ -1,0 +1,7 @@
+SESSION2 : RECEIVING SESSION
+Pattern: "xmlns" attribute with explicit inline content
+
+<scxml:transition event="external.event">
+  <csta:makecall callingDevice="data('_event')/csta:MakeCall/csta:callingDevice"
+                 callingDirectoryNumber="data('_event')/csta:MakeCall/csta:callingDirectoryNumber"/>
+</scxml:transition>

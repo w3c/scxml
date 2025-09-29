@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 9.2.5.2 Cancel -->
+	<element>
+		<name>cancel</name>
+		<attributes>
+			<attribute>
+				<name>sendid</name>
+				<type> IDREF</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>The sendid of a delayed event</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with sendidexpr. 
+					</attributeConstraints>
+					<description>The ID of the event(s) to be cancelled.  If
+						multiple delayed events have this sendid, the Processor
+						will cancel them all. </description>
+				
+			</attribute>
+			<attribute>
+				<name>sendidexpr</name>
+				<type> Value Expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>Any expression that evaluates to the ID of a delayed event</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with sendid.</attributeConstraints>				
+				<description>
+	A dynamic alternative to 'sendid'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119>
+	 evaluate it when the parent &lt;cancel&gt; 
+		element is evaluated and treat the result as if it had been entered as the value of 'sendid'. 
+				</description>
+				</attribute>
+		</attributes>
+	</element>
+</elements>

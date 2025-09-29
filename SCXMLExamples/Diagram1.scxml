@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<scxml version="1.0" xmlns="http://www.w3.org/2005/SCXML"> 
+  <state id="S1">
+    <transition event="Event1" target="S2"/>
+  </state>
+ 
+  <state id="S2">
+    <transition event="Event2" cond="X>0" target="S1"/>
+    <transition event="Event2" cond ="X<0" target next="S3"/>
+  </state> 
+  
+  <state id="S3">
+  </state>
+  
+</scxml>

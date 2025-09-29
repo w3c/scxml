@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>location</td><td> false </td><td/><td>location expression</td><td>none</td><td>  Any valid location expression. </td><td>
+					The location of the subtree to validate.  If it is not present,
+					the entire datamodel is validated.  See <specref ref="LocationExpressions"/> for details.
+				</td></tr><tr><td>schema</td><td>false</td><td/><td> URI</td><td>none</td><td> Any valid URI</td><td>
+					The location of the schema to use for validation.  If this attribute is
+					not present, the schema specified in the top-level &lt;datamodel&gt; is used.
+				</td></tr></tbody></table>

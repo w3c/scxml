@@ -1,0 +1,61 @@
+<elements>
+<!-- state -->
+	<element>
+		<name>transition</name>
+		<attributes>
+			<attribute>
+				<name>event</name>
+				<type>EventsTypes.datatype.  </type>
+				<required> false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> A space-separated list of event descriptors.  See
+				<specref ref="EventDescriptors"/> for details.</validValues>
+				<attributeConstraints> </attributeConstraints>
+				<description>
+         A list of designators of events that trigger this transition. See 
+          <specref ref="SelectingTransitions"/> for
+         details on how transitions are selected and executed.  See <specref ref="schemas"/> for the definition of the datatype.
+				</description>
+			</attribute>
+
+			<attribute>
+				<name>cond</name>
+				<type>Boolean expression</type>
+				<required>false</required>
+				<defaultValue>'true'</defaultValue>
+				<validValues>Any boolean expression. See <specref ref="ConditionalExpressions"/> for details.</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         The guard condition for this transition. See 
+           <specref ref="SelectingTransitions"/> for details.
+				</description>
+			</attribute>
+			
+		<attribute>
+		<name>target</name>
+		<type>IDREFS</type>
+		<required>false</required>
+		<defaultValue>none</defaultValue>
+		<validValues>A legal state specification.  See <specref ref="LegalStateConfigurations"/>
+					for details.</validValues>
+				<attributeConstraints>.</attributeConstraints>
+					<description>The identifier(s) of the state or parallel 
+						region to transition to. 
+						See <specref ref="SelectingTransitions"/> for details.
+						</description>
+    </attribute>
+    		<attribute>
+		<name>type</name>
+		<type>enum</type>
+		<required>false</required>
+		<defaultValue>"external"</defaultValue>
+		<validValues>"internal" "external"</validValues>
+				<attributeConstraints></attributeConstraints>
+					<description>Determines whether the source state is exited in transitions whose
+						target state is a descendant of the source state. 
+						See <specref ref="SelectingTransitions"/> for details.
+						</description>
+    </attribute>
+ 		</attributes>
+	</element>
+</elements>

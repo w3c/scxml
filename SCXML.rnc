@@ -1,0 +1,121 @@
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+default namespace ns1 = "http://www.w3.org/2005/SCXML"
+
+# Here is our top level rule
+start = scxml
+scxml =
+  element scxml {
+    attribute version { "1.0" },
+    attribute initialstate { xsd:IDREF }?,
+    (state*)
+  }
+state =
+  element state {
+    attribute id { xsd:ID }?,
+    [ a:defaultValue = "false" ] attribute final { xsd:boolean }?,
+    attribute src { xsd:anyURI }?,
+    (initial?
+     & onentry?
+     & onexit?
+     & transition*
+     & state*
+     & parallel*
+     & history*
+     & sync*
+     & join*)
+  }
+parallel =
+  element parallel {
+    attribute id { xsd:ID }?,
+    (onentry? & onexit? & state* & sync* & join*)
+  }
+initial =
+  element initial {
+    attribute id { xsd:ID }?,
+    attribute src { xsd:anyURI }?,
+    (transition*)
+  }
+history =
+  element history {
+    attribute id { xsd:ID }?,
+    [ a:defaultValue = "shallow" ]
+    attribute type { "shallow" | "deep" }?,
+    attribute src { xsd:anyURI }?,
+    (transition*)
+  }
+join =
+  element join {
+    attribute id { xsd:ID }?,
+    (transition*)
+  }
+sync =
+  element sync {
+    attribute id { xsd:ID }?,
+    [ a:defaultValue = "0" ] attribute bound { xsd:integer }?,
+    (transition*)
+  }
+transition =
+  element transition {
+    attribute event { text }?,
+    attribute cond { text }?,
+    attribute name { text }?,
+    ((target* | exit?) & ExecutableContent*)
+  }
+target =
+  element target {
+    state?,
+    attribute next { xsd:IDREF }?,
+    attribute cond { text }?
+  }
+onentry = element onentry { ExecutableContent* }
+onexit = element onexit { ExecutableContent* }
+log =
+  element log {
+    attribute expr { text }?,
+    attribute label { text }?
+  }
+if =
+  element if {
+    attribute cond { text }?,
+    elseif*,
+    else*,
+    ExecutableContent*
+  }
+elseif =
+  element elseif {
+    attribute cond { text }?
+  }
+else = element else { empty }
+assign =
+  element assign {
+    attribute expr { text },
+    attribute name { text }
+  }
+var =
+  element var {
+    attribute expr { text }?,
+    attribute name { text }
+  }
+exit =
+  element exit {
+    attribute expr { text }?,
+    attribute namelist { text }?
+  }
+send =
+  element send {
+    attribute target { text }?,
+    [ a:defaultValue = "scxml" ] attribute targettype { text }?,
+    attribute sendid { text }?,
+    [ a:defaultValue = "'0s'" ] attribute delay { text }?,
+    attribute event { text }?,
+    attribute hints { text }?,
+    attribute namelist { text }?,
+    anyOtherNSElement*
+  }
+anyOtherNSElement =
+  element * - ns1:* {
+    (attribute * - ns1:* { text }
+     | text
+     | anyOtherNSElement)*
+  }
+ExecutableContent = assign*, var*, log*, send*, if*, anyOtherNSElement*

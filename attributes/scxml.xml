@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- scxml -->
+	<element>
+		<name>scxml</name>
+		<attributes>
+			<attribute>
+				<name>initial</name>
+				<type>IDREFS</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A legal state specification.  See <specref ref="LegalStateConfigurations"/>
+					for details. </validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>
+        The id of the initial state(s) for the document.  If not specified, 
+        the default initial state is the first child state in document order.
+        </description>
+			</attribute>
+			<attribute>
+				<name>name</name>
+				<type>NMTOKEN</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> Any valid NMTOKEN </validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>
+        The name of this state machine.  It is for purely informational purposes. 
+        </description>
+				</attribute>
+
+			<attribute>
+				<name>xmlns</name>
+				<type>URI</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues>The value <rfc2119>must</rfc2119> be "http://www.w3.org/2005/07/scxml". </validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>
+				</description>
+			</attribute>
+			
+		<attribute>
+				<name>version</name>
+				<type>decimal</type>
+				<required>true</required>
+				<defaultValue>none</defaultValue>
+				<validValues>The value <rfc2119>must</rfc2119> be "1.0"</validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>
+				</description>
+			</attribute>
+				
+			<attribute>
+				<name>datamodel</name>
+				<type>NMTOKEN</type>
+				<required>false</required>
+				<defaultValue>platform-specific</defaultValue>
+				<validValues>"null", "ecmascript", "xpath" or other platform-defined values. </validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>The datamodel that this document requires.  "null" denotes the 
+				Null datamodel, "ecmascript" the ECMAScript datamodel, and "xpath" the XPath datamodel, 
+				as defined in <specref ref="profiles"/>.
+				</description>
+			</attribute>
+			
+						<attribute>
+				<name>binding</name>
+				<type>enum</type>
+				<required>false</required>
+				<defaultValue>"early"</defaultValue>
+				<validValues>"early", "late" </validValues>
+				<attributeConstraints>none</attributeConstraints>
+				<description>The data binding to use.  See <specref ref="DataBinding"/> for details.
+				</description>
+			</attribute>
+
+
+		</attributes>
+		</element>
+</elements>

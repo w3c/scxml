@@ -1,0 +1,16 @@
+SESSION1 : SENDING SESSION
+Pattern: "event" attribute with an optional "namelist"
+
+<datamodel>
+  <data id="email" expr="'mailto:recipient@example.com'"/>
+  <data id="content" expr="'http://www.example.com/mycontent.txt'"/>
+  <data id="jsoncontent" src="http://www.example.com/headers.json"/>
+</datamodel>
+
+  ...
+
+<send sendid="send-123"
+      target="'http://scxml-processors.example.com/session2'"
+      type="http://www.w3.org/TR/scxml/#SCXMLEventProcessor" event="'email.send'"
+      namelist="email content jsoncontent"/>
+

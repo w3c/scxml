@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- datamodel -->
+	<element>
+		<name>datamodel</name>
+		<attributes>
+			<attribute>
+				<name>schema</name>
+				<type>URI</type>
+				<required> false </required>
+				<defaultValue>none</defaultValue>
+				<validValues> Location of the schema for this datamodel </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+          URL of the schema for this datamodel.  See <specref ref="validate"/> for 
+          its use.   The
+          exact nature of the schema depends on the data model language being used. 
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

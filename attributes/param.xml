@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- param -->
+	<element>
+		<name>param</name>
+		<attributes>
+			<attribute>
+				<name>name</name>
+				<type>NMTOKEN</type>
+				<required> true </required>
+				<defaultValue>none</defaultValue>
+				<validValues> A string literal </validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+         The name of the key.  
+				</description>
+			</attribute>
+
+
+			<attribute>
+				<name>expr</name>
+				<type>value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid value expression</validValues>
+				<attributeConstraints>May not occur with 'location'</attributeConstraints>
+				<description>
+A value expression (see <specref ref="ValueExpressions"/>) that is evaluated to 
+provide the value.  
+				</description>
+			</attribute>
+			
+			<attribute>
+				<name>location</name>
+				<type>location expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> Valid location expression</validValues>
+				<attributeConstraints>May not occur with 'expr'</attributeConstraints>
+				<description>
+A location expression (see <specref ref="LocationExpressions"/>) that specifies
+         the location in the datamodel to retrieve the value from.  
+				</description>
+			</attribute>
+
+		</attributes>
+	</element>
+</elements>

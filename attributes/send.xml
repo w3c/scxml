@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- Section 9.2.3.2 Send -->
+	<element>
+		<name>send</name>
+		<attributes>
+			<attribute>
+				<name>event</name>
+				<type>EventType.datatype</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>
+				</validValues>
+				<attributeConstraints>
+					<rfc2119>Must not</rfc2119>  occur with 'eventexpr'.  If the type is http://www.w3.org/TR/scxml/#SCXMLEventProcessor, 
+					either this attribute or 'eventexpr' <rfc2119>must</rfc2119> be present.
+				</attributeConstraints>
+				<description>
+					A string indicating the name of message
+					being generated.  See <specref ref="schemas"/> for details on the 
+					data type. 
+									</description>
+			</attribute>
+			<attribute>
+				<name>eventexpr</name>
+				<type> Value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>
+				</validValues>
+				<attributeConstraints>
+<rfc2119>Must not</rfc2119>  occur with 'event'.  If the type is http://www.w3.org/TR/scxml/#SCXMLEventProcessor, 
+					either this attribute or 'event' <rfc2119>must</rfc2119> be present.
+				</attributeConstraints>
+				<description>
+A dynamic alternative to 'event'. If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'event'.
+				</description>
+			</attribute>
+
+			<attribute>
+				<name>target</name>
+				<type> URI</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>A valid target URI</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119>  occur with 'targetexpr'</attributeConstraints>
+				<description>
+					The unique identifier of the message target
+					that the platform should send the event to.  See <specref ref="SendTargets"/> for details.
+					
+				</description>
+			</attribute>
+			<attribute>
+				<name>targetexpr</name>
+				<type> Value expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>An expression evaluating to a valid target URI</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119> occur with 'target'</attributeConstraints>
+				<description>
+A dynamic alternative to 'target'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'target'.
+				</description>
+			</attribute>
+
+			<attribute>
+				<name>type</name>
+				<type>URI</type>
+				<required>false</required>
+				<defaultValue> none </defaultValue>
+				<validValues>
+							
+				</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119>  occur with 'typeexpr'</attributeConstraints>
+				<description>
+					 The URI that identifies the transport mechanism for the message.  
+					 See <specref ref="SendTypes"/> for details.
+				</description>
+			</attribute>
+			
+		<attribute>
+				<name>typeexpr</name>
+				<type>value expression</type>
+				<required>false</required>
+				<defaultValue> none </defaultValue>
+				<validValues>
+							
+				</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119>  occur with 'type'</attributeConstraints>
+				<description>
+A dynamic alternative to 'type'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'type'.
+				</description>
+			</attribute>
+
+			<attribute>
+				<name>id</name>
+				<type> xml:ID</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>  Any valid token</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119>  occur with 'idlocation'.</attributeConstraints>
+				<description>
+					A string literal to be used as the identifier for this instance of &lt;send&gt;. See 
+					<specref ref="IDs"/> for details. 
+				</description>
+			</attribute>
+			
+			<attribute>
+				<name>idlocation </name>
+				<type> Location expression</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>  Any valid location expression</validValues>
+				<attributeConstraints><rfc2119>Must not</rfc2119>  occur with 'id'.</attributeConstraints>
+				<description>
+					Any location expression evaluating to a data model location in which a system-generated
+					id can be stored. See below for details.  
+				</description>
+			</attribute>
+	<attribute>
+				<name>delay</name>
+				<type> Duration.datatype</type>
+				<required>false</required>
+				<defaultValue>None</defaultValue>
+				<validValues> A time designation as defined in CSS2 <bibref ref="CSS2"/> format
+				</validValues>
+				<attributeConstraints>
+										<rfc2119>Must not</rfc2119>  occur with 'delayexpr' or when the attribute 'target' has
+										the value "_internal".  </attributeConstraints>
+				<description>
+Indicates how long the processor should wait  before dispatching the message. 
+					See <specref ref="schemas"/> for details on the 
+					data type. 
+				</description>
+			</attribute>
+			<attribute>
+				<name>delayexpr</name>
+				<type> Value expression</type>
+				<required>false</required>
+				<defaultValue>None</defaultValue>
+				<validValues> A value expression which returns a time designation as defined in CSS2 <bibref ref="CSS2"/> format
+				</validValues>
+				<attributeConstraints>
+										<rfc2119>Must not</rfc2119> occur with 'delay' or when the attribute 'target' has
+										the value "_internal".  </attributeConstraints>
+				<description>
+A dynamic alternative to 'delay'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'delay'.
+				</description>
+			</attribute>
+			
+	
+			<attribute>
+				<name>namelist</name>
+				<type>List of location expressions</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues> List of valid location expressions</validValues>
+				<attributeConstraints>
+					<rfc2119>Must not</rfc2119> be specified in conjunction with  &lt;content&gt; 
+					element.  
+				</attributeConstraints>
+				<description>
+					A space-separated list of one or more data model locations to be included as attribute/value pairs
+					with the message.  (The name  of the location is the attribute and the value stored at the location
+					is the value.) See <specref ref="LocationExpressions"/> 
+					for details. 
+				</description>
+			</attribute>
+
+
+
+		</attributes>
+	</element>
+</elements>

@@ -1,0 +1,9 @@
+SESSION2 : RECEIVING SESSION
+Pattern: "event" attribute with an optional "namelist"
+
+<scxml:transition event="email.send">
+  <my:email to="data('_event')/scxml:property[@name='email']"
+            cc="data('_event')/scxml:property[@name='xmlcontent']/h:headers/h:cc"
+            subject="data('_event')/scxml:property[@name='xmlcontent']/h:headers/h:subject"
+            content="data('_event')/scxml:property[@name='content']"/>
+</scxml:transition>

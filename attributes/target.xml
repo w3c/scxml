@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<elements>
+<!-- target -->
+	<element>
+		<name>target</name>
+		<attributes>
+			<attribute>
+				<name>next</name>
+				<type> state ID</type>
+				<required>false</required>
+				<defaultValue>none</defaultValue>
+				<validValues>any state ID in the current document</validValues>
+				<attributeConstraints></attributeConstraints>
+				<description>
+					The identifier of the state to transition to. Must be omitted if a &lt;state&gt; child is present.
+				</description>
+			</attribute>
+		</attributes>
+	</element>
+</elements>

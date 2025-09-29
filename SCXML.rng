@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.w3.org/2005/SCXML">
+    
+    <!-- Here is our top level rule -->
+    <start>
+        <ref name="scxml"></ref>
+    </start>
+
+    <define name="scxml">
+        <element name="scxml" ns="http://www.w3.org/2005/SCXML">
+            <attribute name="version">
+                <choice>
+                    <value>1.0</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="initialstate">
+                    <data type="IDREF"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="state"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+
+    <define name="state">
+        <element name="state" ns="http://www.w3.org/2005/SCXML">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="final" a:defaultValue="false">
+                    <data type="boolean"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="src">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="initial"/>
+                </optional>
+                <optional>
+                    <ref name="onentry"/>
+                </optional>
+                <optional>
+                    <ref name="onexit"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="transition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="state"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="parallel"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="history"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="sync"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="join"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <define name="parallel">
+        <element name="parallel">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="onentry"/>
+                </optional>
+                <optional>
+                    <ref name="onexit"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="state"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="sync"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="join"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <define name="initial">
+        <element name="initial" ns="http://www.w3.org/2005/SCXML">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="src">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="transition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="history">
+        <element name="history" ns="http://www.w3.org/2005/SCXML">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="type" a:defaultValue="shallow">
+                    <choice>
+                        <value>shallow</value>
+                        <value>deep</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="src">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="transition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>    
+    
+    <define name="join">
+        <element name="join" ns="http://www.w3.org/2005/SCXML">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="transition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>    
+    <define name="sync">
+        <element name="sync" ns="http://www.w3.org/2005/SCXML">
+            <optional>
+                <attribute name="id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="bound" a:defaultValue="0">
+                  <data type="integer"/>
+                </attribute>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="transition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>    
+    
+    <define name="transition">
+        <element name="transition">
+            <optional>
+                <attribute name="event">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="cond">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="name">
+                    <text/>
+                </attribute>
+            </optional>
+            <interleave>
+                <choice>
+                    <zeroOrMore>
+                        <ref name="target"/>
+                    </zeroOrMore>
+                    <optional>
+                        <ref name="exit"/>
+                    </optional>
+                </choice>
+                
+                <zeroOrMore>
+                    <ref name="ExecutableContent"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="target">
+        <element name="target">
+            <optional>
+                <ref name="state"/>
+            </optional>
+            <optional>
+                <attribute name="next">
+                    <data type="IDREF"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="cond">
+                    <text/>
+                </attribute>
+            </optional>
+        </element>
+    </define>    
+    
+    
+    <define name="onentry">
+        <element name="onentry">
+            <interleave>
+                <zeroOrMore>
+                    <ref name="ExecutableContent"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>    
+    
+    <define name="onexit">
+        <element name="onexit">
+            <interleave>
+                <zeroOrMore>
+                    <ref name="ExecutableContent"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>    
+
+    <define name="log">
+        <element name="log">
+            <optional>
+                <attribute name="expr">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="label">
+                    <text/>
+                </attribute>                
+            </optional>
+        </element>
+    </define>
+
+    <define name="if">
+        <element name="if">
+            <optional>
+                <attribute name="cond">
+                    <text/>
+                </attribute>
+            </optional>
+            <zeroOrMore>
+                <ref name="elseif"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="else"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="ExecutableContent"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="elseif">
+        <element name="elseif">
+            <optional>
+                <attribute name="cond">
+                    <text/>
+                </attribute>
+            </optional>
+        </element>
+    </define>
+
+    <define name="else">
+        <element name="else">
+            <empty/>
+        </element>
+    </define>
+
+    <define name="assign">
+        <element name="assign">
+                <attribute name="expr">
+                    <text/>
+                </attribute>
+                <attribute name="name">
+                    <text/>
+                </attribute>                
+        </element>
+    </define>
+
+    <define name="var">
+        <element name="var">
+            <optional>
+                <attribute name="expr">
+                    <text/>
+                </attribute>
+            </optional>
+            <attribute name="name">
+                <text/>
+            </attribute>                
+        </element>
+    </define>
+    
+    <define name="exit">
+        <element name="exit">
+            <optional>
+                <attribute name="expr">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="namelist">
+                    <text/>
+                </attribute>                
+            </optional>
+        </element>
+    </define>     
+
+    <define name="send">
+        <element name="send">
+            <optional>
+                <attribute name="target">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="targettype" a:defaultValue="scxml">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="sendid">
+                    <text/>
+                </attribute>                
+            </optional>
+            <optional>
+                <attribute name="delay" a:defaultValue="'0s'">
+                    <text/>
+                </attribute>                
+            </optional>
+            <optional>
+                <attribute name="event">
+                    <text/>
+                </attribute>                
+            </optional>
+            <optional>
+                <attribute name="hints">
+                    <text/>
+                </attribute>                
+            </optional>
+            <optional>
+                <attribute name="namelist">
+                    <text/>
+                </attribute>                
+            </optional>
+            <zeroOrMore>
+                <ref name="anyOtherNSElement"/>
+            </zeroOrMore>
+        </element>
+    </define>     
+    
+    <define name="anyOtherNSElement">
+        <element>
+            <anyName>
+                <except>
+                    <nsName/>
+                </except>
+            </anyName>
+            <zeroOrMore>
+                <choice>
+                    <attribute>
+                    <anyName>
+                        <except>
+                            <nsName/>
+                        </except>
+                    </anyName>
+                    </attribute>
+                    <text/>
+                    <ref name="anyOtherNSElement"/>
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="ExecutableContent">
+        <zeroOrMore>
+            <ref name="assign"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="var"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="log"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="send"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="if"/>
+        </zeroOrMore>
+        <zeroOrMore>
+            <ref name="anyOtherNSElement"/>
+        </zeroOrMore>
+    </define>
+</grammar>

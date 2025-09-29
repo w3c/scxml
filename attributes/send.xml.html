@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="elements.xslt"?>
+<table border="1" summary="attibute table"><tbody><tr><th>Name</th><th>Required</th><th>Attribute Constraints</th><th>Type</th><th>Default Value</th><th>Valid Values</th><th>Description</th></tr><tr><td>event</td><td>false</td><td>
+					Must not  occur with 'eventexpr'.  If the type is http://www.w3.org/TR/scxml/#SCXMLEventProcessor, 
+					either this attribute or 'eventexpr' must be present.
+				</td><td>EventType.datatype</td><td>none</td><td>
+				</td><td>
+					A string indicating the name of message
+					being generated.  See <specref ref="schemas"/> for details on the 
+					data type. 
+									</td></tr><tr><td>eventexpr</td><td>false</td><td>
+Must not  occur with 'event'.  If the type is http://www.w3.org/TR/scxml/#SCXMLEventProcessor, 
+					either this attribute or 'event' must be present.
+				</td><td> Value expression</td><td>none</td><td>
+				</td><td>
+A dynamic alternative to 'event'. If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'event'.
+				</td></tr><tr><td>target</td><td>false</td><td>Must not  occur with 'targetexpr'</td><td> URI</td><td>none</td><td>A valid target URI</td><td>
+					The unique identifier of the message target
+					that the platform should send the event to.  See <specref ref="SendTargets"/> for details.
+					
+				</td></tr><tr><td>targetexpr</td><td>false</td><td>Must not occur with 'target'</td><td> Value expression</td><td>none</td><td>An expression evaluating to a valid target URI</td><td>
+A dynamic alternative to 'target'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'target'.
+				</td></tr><tr><td>type</td><td>false</td><td>Must not  occur with 'typeexpr'</td><td>URI</td><td> none </td><td>
+							
+				</td><td>
+					 The URI that identifies the transport mechanism for the message.  
+					 See <specref ref="SendTypes"/> for details.
+				</td></tr><tr><td>typeexpr</td><td>false</td><td>Must not  occur with 'type'</td><td>value expression</td><td> none </td><td>
+							
+				</td><td>
+A dynamic alternative to 'type'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'type'.
+				</td></tr><tr><td>id</td><td>false</td><td>Must not  occur with 'idlocation'.</td><td> xml:ID</td><td>none</td><td>  Any valid token</td><td>
+					A string literal to be used as the identifier for this instance of &lt;send&gt;. See 
+					<specref ref="IDs"/> for details. 
+				</td></tr><tr><td>idlocation </td><td>false</td><td>Must not  occur with 'id'.</td><td> Location expression</td><td>none</td><td>  Any valid location expression</td><td>
+					Any location expression evaluating to a data model location in which a system-generated
+					id can be stored. See below for details.  
+				</td></tr><tr><td>delay</td><td>false</td><td>
+										Must not  occur with 'delayexpr' or when the attribute 'target' has
+										the value "_internal".  </td><td> Duration.datatype</td><td>None</td><td> A time designation as defined in CSS2 <bibref ref="CSS2"/> format
+				</td><td>
+Indicates how long the processor should wait  before dispatching the message. 
+					See <specref ref="schemas"/> for details on the 
+					data type. 
+				</td></tr><tr><td>delayexpr</td><td>false</td><td>
+										Must not occur with 'delay' or when the attribute 'target' has
+										the value "_internal".  </td><td> Value expression</td><td>None</td><td> A value expression which returns a time designation as defined in CSS2 <bibref ref="CSS2"/> format
+				</td><td>
+A dynamic alternative to 'delay'.  If this attribute is present, the SCXML Processor <rfc2119>must</rfc2119> evaluate
+it when the parent &lt;send&gt; element is evaluated and treat the result as if it had
+been entered as the value of 'delay'.
+				</td></tr><tr><td>namelist</td><td>false</td><td>
+					Must not be specified in conjunction with  &lt;content&gt; 
+					element.  
+				</td><td>List of location expressions</td><td>none</td><td> List of valid location expressions</td><td>
+					A space-separated list of one or more data model locations to be included as attribute/value pairs
+					with the message.  (The name  of the location is the attribute and the value stored at the location
+					is the value.) See <specref ref="LocationExpressions"/> 
+					for details. 
+				</td></tr></tbody></table>
